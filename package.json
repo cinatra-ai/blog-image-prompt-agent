@@ -1,0 +1,36 @@
+{
+  "name": "@cinatra-ai/blog-image-prompt-agent",
+  "version": "0.1.6",
+  "license": "Apache-2.0",
+  "description": "Stateless leaf agent that generates blog image-prompts (text descriptions, NOT images) from a blog draft. Returns {prompts: BlogImagePrompt[], notes} where BlogImagePrompt = {placement, prompt, rationale}. No MCP primitive calls, no toolboxes — pure LLM prompt generation from the supplied draft.",
+  "type": "module",
+  "cinatra": {
+    "apiVersion": "cinatra.ai/v1",
+    "kind": "agent",
+    "dependencies": [
+      {
+        "packageName": "@cinatra-ai/context-selection-agent",
+        "edgeType": "runtime",
+        "versionConstraint": {
+          "kind": "semver-range",
+          "range": "*"
+        },
+        "requirement": "required",
+        "kind": "agent"
+      }
+    ],
+    "packageType": "agent",
+    "manifestVersion": 1,
+    "sourceTemplateId": "blog-image-prompt-agent-flow",
+    "sourceVersionId": "ac911a3b-ee55-47bf-80f9-4ec539a4cbee",
+    "sourceVersionNumber": 1,
+    "type": "flow",
+    "riskLevel": "low",
+    "hasApprovalGates": true,
+    "toolAccess": [],
+    "ownerOrgId": null,
+    "agentDependencies": {
+      "@cinatra-ai/context-selection-agent": "^0.1.1"
+    }
+  }
+}
