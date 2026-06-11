@@ -4,6 +4,10 @@
   "license": "Apache-2.0",
   "description": "Stateless leaf agent that generates blog image-prompts (text descriptions, NOT images) from a blog draft. Returns {prompts: BlogImagePrompt[], notes} where BlogImagePrompt = {placement, prompt, rationale}. No MCP primitive calls, no toolboxes — pure LLM prompt generation from the supplied draft.",
   "type": "module",
+  "files": [
+    "cinatra",
+    "skills"
+  ],
   "cinatra": {
     "apiVersion": "cinatra.ai/v1",
     "kind": "agent",
