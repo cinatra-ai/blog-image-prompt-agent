@@ -13,8 +13,12 @@
 name: release
 
 on:
-  release:
-    types: [published]
+  # Tag-driven: pushing a `v*` tag (e.g. `v1.2.3`) builds + submits this
+  # extension and decorates the tag's GitHub Release. The reusable workflow
+  # resolves the tag from `github.ref_name` and enforces tag==v<package.json
+  # .version> (cinatra-engineering#198).
+  push:
+    tags: ['v*']
   # Manual backfill: the reusable workflow REFUSES a dispatch unless it is run
   # against a TAG ref equal to v<package.json.version> (a branch HEAD can never
   # publish). Run it from the tag, e.g. `gh workflow run release.yml --ref v1.2.3`.
@@ -26,9 +30,9 @@ jobs:
       contents: write       # GitHub Release decoration (PR-list notes + tarball/checksums assets)
       id-token: write       # build-provenance attestation
       attestations: write
-    # cinatra-ai/.github has no version tags yet; pinned to its main HEAD at
-    # authoring time (020b09b). The trailing marker is the untagged-repo pin
-    # convention: a zero-version semver pre-release form (passes the
-    # actions-pinned-gate format check) encoding branch + short SHA.
-    uses: cinatra-ai/.github/.github/workflows/reusable-extension-release.yml@101a06e0a5ab0a6c4c0e6d4340ff7a84042a4528 # v0.0.0-main.101a06e
+    # cinatra-ai/.github has no version tags yet; pinned to its current main
+    # HEAD (fea09b3). The trailing marker is the untagged-repo pin convention: a
+    # zero-version semver pre-release form (passes the actions-pinned-gate
+    # format check) encoding branch + short SHA.
+    uses: cinatra-ai/.github/.github/workflows/reusable-extension-release.yml@fea09b38e94c0a64f7fab3c02d34b0fe1ecf746d # v0.0.0-main.fea09b3
     secrets: inherit
