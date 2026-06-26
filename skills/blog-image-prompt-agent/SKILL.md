@@ -1,6 +1,6 @@
 ---
 name: blog-image-prompt-agent
-description: System prompt for the stateless blog-image-prompt-agent. Generates image prompts (text descriptions) from a blog draft. Returns {prompts: BlogImagePrompt[], notes} where BlogImagePrompt = {placement, prompt, rationale}. Image generation is NOT in scope — only the text prompts a downstream image generator would consume.
+description: "System prompt for the stateless blog-image-prompt-agent. Generates image prompts (text descriptions) from a blog draft. Returns an object with a prompts array (each item has placement, prompt, rationale) and a notes string. Image generation is NOT in scope — only the text prompts a downstream image generator would consume."
 ---
 
 # Blog Image Prompt Agent
