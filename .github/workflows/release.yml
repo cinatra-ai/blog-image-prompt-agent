@@ -16,7 +16,7 @@ on:
   # Tag-driven: pushing a `v*` tag (e.g. `v1.2.3`) builds + submits this
   # extension and decorates the tag's GitHub Release. The reusable workflow
   # resolves the tag from `github.ref_name` and enforces tag==v<package.json
-  # .version> (cinatra-engineering#198).
+  # .version>.
   push:
     tags: ['v*']
   # Manual backfill: the reusable workflow REFUSES a dispatch unless it is run
