@@ -96,7 +96,26 @@
       "type": "array",
       "json_schema": {
         "items": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "placement": {
+              "type": "string",
+              "description": "The placement label this prompt was written for; one of the labels supplied in the input `placements` array (by default cover, inline or social). Never a synthesized label."
+            },
+            "prompt": {
+              "type": "string",
+              "description": "The concrete 30-150 word image description an image generator consumes: subject, composition, lighting, colour cues and visual style."
+            },
+            "rationale": {
+              "type": "string",
+              "description": "One to two sentences of editorial justification for why this image fits its placement and the draft's tone; never a restatement of the prompt."
+            }
+          },
+          "required": [
+            "placement",
+            "prompt",
+            "rationale"
+          ]
         }
       }
     },
@@ -482,7 +501,26 @@
           "type": "array",
           "json_schema": {
             "items": {
-              "type": "object"
+              "type": "object",
+              "properties": {
+                "placement": {
+                  "type": "string",
+                  "description": "The placement label this prompt was written for; one of the labels supplied in the input `placements` array (by default cover, inline or social). Never a synthesized label."
+                },
+                "prompt": {
+                  "type": "string",
+                  "description": "The concrete 30-150 word image description an image generator consumes: subject, composition, lighting, colour cues and visual style."
+                },
+                "rationale": {
+                  "type": "string",
+                  "description": "One to two sentences of editorial justification for why this image fits its placement and the draft's tone; never a restatement of the prompt."
+                }
+              },
+              "required": [
+                "placement",
+                "prompt",
+                "rationale"
+              ]
             }
           }
         },
@@ -510,7 +548,26 @@
           "type": "array",
           "json_schema": {
             "items": {
-              "type": "object"
+              "type": "object",
+              "properties": {
+                "placement": {
+                  "type": "string",
+                  "description": "The placement label this prompt was written for; one of the labels supplied in the input `placements` array (by default cover, inline or social). Never a synthesized label."
+                },
+                "prompt": {
+                  "type": "string",
+                  "description": "The concrete 30-150 word image description an image generator consumes: subject, composition, lighting, colour cues and visual style."
+                },
+                "rationale": {
+                  "type": "string",
+                  "description": "One to two sentences of editorial justification for why this image fits its placement and the draft's tone; never a restatement of the prompt."
+                }
+              },
+              "required": [
+                "placement",
+                "prompt",
+                "rationale"
+              ]
             }
           },
           "default": []
