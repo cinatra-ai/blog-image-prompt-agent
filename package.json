@@ -37,5 +37,8 @@
     "agentDependencies": {
       "@cinatra-ai/context-selection-agent": "^0.1.1"
     }
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\""
   }
 }
