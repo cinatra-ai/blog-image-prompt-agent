@@ -1049,6 +1049,11 @@
           "component_type": "ApiNode",
           "id": "ctx-imagePromptContext-resolve_context",
           "name": "Resolve context candidates",
+          "metadata": {
+            "cinatra": {
+              "publishes": false
+            }
+          },
           "url": "{{CINATRA_BASE_URL}}/api/context-resolve",
           "http_method": "POST",
           "data": {
@@ -1186,6 +1191,11 @@
           "component_type": "ApiNode",
           "id": "ctx-imagePromptContext-finalize_interactive",
           "name": "Finalize selected context (interactive)",
+          "metadata": {
+            "cinatra": {
+              "publishes": false
+            }
+          },
           "url": "{{CINATRA_BASE_URL}}/api/context-finalize",
           "http_method": "POST",
           "data": {
@@ -1239,6 +1249,11 @@
           "component_type": "ApiNode",
           "id": "ctx-imagePromptContext-finalize_autonomous",
           "name": "Finalize selected context (autonomous)",
+          "metadata": {
+            "cinatra": {
+              "publishes": false
+            }
+          },
           "url": "{{CINATRA_BASE_URL}}/api/context-finalize",
           "http_method": "POST",
           "data": {
@@ -1335,7 +1350,8 @@
       },
       "metadata": {
         "cinatra": {
-          "purpose": "author-placed-context-resolution-for-imagePromptContext"
+          "purpose": "author-placed-context-resolution-for-imagePromptContext",
+          "publishes": false
         }
       }
     }
